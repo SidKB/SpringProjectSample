@@ -1,5 +1,9 @@
 package com.spring.sid.beans;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "user")
 public class User {
 
 	
@@ -16,6 +20,10 @@ public class User {
 		this.country = country;
 	}
 	
+	public User(){
+		//User(42342L,"Priyo",42342,"India");
+	}
+	
 	/**
 	 * @return the userId
 	 */
@@ -25,6 +33,7 @@ public class User {
 	/**
 	 * @param userId the userId to set
 	 */
+	@XmlElement
 	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
@@ -37,6 +46,7 @@ public class User {
 	/**
 	 * @param userName the userName to set
 	 */
+	@XmlElement
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
@@ -49,6 +59,7 @@ public class User {
 	/**
 	 * @param phoneNumber the phoneNumber to set
 	 */
+	@XmlElement
 	public void setPhoneNumber(Long phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
@@ -61,6 +72,7 @@ public class User {
 	/**
 	 * @param country the country to set
 	 */
+	@XmlElement
 	public void setCountry(String country) {
 		this.country = country;
 	}

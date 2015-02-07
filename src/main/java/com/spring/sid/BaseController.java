@@ -8,7 +8,7 @@ public interface BaseController {
 
 public List<User> users();
 public User user(Long userId);
-public List<User> userByCountry(String country);
+public User userByCountry(String country);
 public void user(User user);
 
 

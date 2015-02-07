@@ -66,17 +66,17 @@ public class FirstControllerImpl implements BaseController {
 		return null;
 	}
 	
-	@RequestMapping(value = "/country/{country}", method = RequestMethod.GET, 
-			produces="application/xml")
+	@RequestMapping(value = "/country/{country}", method = RequestMethod.GET)
 	@Override
-	public @ResponseBody List<User> userByCountry(@PathVariable("country") String country) {
+	public User userByCountry(@PathVariable("country") String country) {
 		List<User> localUsers = new ArrayList<User>(); 
 		for(User user: users){
 			if(user.getCountry().equals(country)){
 			localUsers.add(user);
 			}
 		}
-		return localUsers;
+		System.out.println("localuser:"+localUsers);
+		return users.get(0);
 	}
 	
 	@ResponseBody
